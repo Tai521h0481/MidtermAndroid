@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Item for when the button is pressed (state_pressed) -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="15dip" />
+            <stroke android:width="1dip" android:color="@color/green_cyan" />
+            <gradient android:angle="-90" android:startColor="#FFFFFF" android:endColor="#FFFFFF" />
+        </shape>
+    </item>
+    <!-- Item for when the button is focused (state_focused) -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="3dip" />
+            <stroke android:width="1dip" android:color="@color/green_cyan" />
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+    <!-- Default item (no specific state) -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="15dip" />
+            <stroke android:width="1dip" android:color="@color/green_cyan" />
+            <solid android:color="#FFFFFF" /> <!-- Set the background color to white -->
+        </shape>
+    </item>
+</selector>

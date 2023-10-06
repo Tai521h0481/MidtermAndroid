@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/display"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/profile_bk"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".EditProfileActivity">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/personalImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/circle"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/captureImgBtn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/ic_baseline_photo_camera_24"
+                android:backgroundTint="@android:color/black" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="ABC"
+            android:textSize="28dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="developer@appsnipp.com"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Role"
+            android:layout_marginTop="10dp"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="20dp"
+            android:background="@color/profileBackground"
+            android:gravity="center">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/profile_bk" />
+
+            <TextView
+                style="@style/profileStyledBackButton"
+                android:text="Back to\nHome" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@color/whiteCardColor"
+        android:orientation="vertical">
+
+        <EditText
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:layout_marginTop="20dp"
+            android:id="@+id/edtName"
+            style="@style/modifiedEditText"
+            android:drawablePadding="10dp"
+            android:textSize="20dp"
+            android:inputType="textEmailAddress"
+            android:maxLines="1" />
+
+        <EditText
+            android:drawableStart="@drawable/ic_baseline_local_phone_24"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edtPhoneNumber"
+            style="@style/modifiedEditText"
+            android:drawablePadding="10dp"
+            android:inputType="textEmailAddress"
+            android:textSize="20dp"
+            android:maxLines="1" />
+
+        <EditText
+            android:drawableStart="@drawable/baseline_elevator_24"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edtAge"
+            style="@style/modifiedEditText"
+            android:drawablePadding="10dp"
+            android:textSize="20dp"
+            android:inputType="textEmailAddress"
+            android:maxLines="1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPassword"
+                android:drawableStart="@drawable/baseline_wifi_password_24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/black"
+                android:inputType="textPassword"
+                android:drawablePadding="10dp"
+                android:textSize="20dp"
+                android:textColorHint="#CD8F8585"
+
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_marginTop="10dp"
+            android:text="SAVE"
+            style="@style/loginButton"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:max="100"
+            android:backgroundTint="@color/whiteCardColor"
+            android:indeterminateTint="#1a09d6"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>
